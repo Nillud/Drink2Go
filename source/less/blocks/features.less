@@ -1,0 +1,52 @@
+.features__header {
+  margin: 0;
+  margin-bottom: 36px;
+  .font-main(700, 24px, 36px);
+  color: #333333;
+  text-align: center;
+}
+
+.features__list {
+  .site-list();
+  padding-bottom: 60px;
+}
+
+.features__item {
+  width: 280px;
+  height: 142px;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &--speed {
+    background: url("../../img/feature-speed.svg") no-repeat top center;
+  }
+
+  &--fit {
+    background: url("../../img/feature-fit.svg") no-repeat top center;
+  }
+
+  &--energy {
+    background: url("../../img/feature-energy.svg") no-repeat top center;
+  }
+
+  &--ecology {
+    background: url("../../img/feature-ecology.svg") no-repeat top center;
+  }
+}
+
+.features__item__header {
+  margin-top: 0;
+  margin-bottom: 4px;
+  padding-top: 66px;
+  .font-main(700, 18px, 32px);
+  text-align: center;
+}
+
+.features__desccription {
+  margin: 0;
+  .font-main(400, 14px, 20px);
+  text-align: center;
+}

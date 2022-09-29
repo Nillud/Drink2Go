@@ -1,0 +1,148 @@
+.catalog-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-form__header {
+  margin-bottom: 21px;
+  .font-main(600, 16px, 24px);
+  color: #333333;
+}
+
+.catalog-form__prices {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    width: 9px;
+    height: 2px;
+    background-color: #bdbdbd;
+  }
+}
+
+.catalog-form__slider {
+  width: 280px;
+  height: 25px;
+  margin-bottom: 25px;
+  background-image: url("../../img/range.png");
+}
+
+.catalog-form__milk {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-form__label {
+  display: flex;
+  .font-main(400, 16px, 24px);
+
+  &:not(:last-child) {
+    margin-bottom: 21px;
+  }
+
+  &:last-child {
+    margin-bottom: 23px;
+  }
+}
+
+.catalog-form__radio-button[type="radio"] + .control-mark {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #bdbdbd;
+}
+
+.catalog-form__checkbox-button[type="checkbox"] + .control-mark {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #bdbdbd;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: @base-white;
+    left: 2px;
+    top: 2px;
+  }
+}
+
+.catalog-form__radio-button[type="radio"]:checked + .control-mark {
+  position: relative;
+  border: 2px solid #7859cf;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #7859cf;
+  }
+}
+
+.catalog-form__radio-button:disabled {
+  & + .radio-button {
+    opacity: 0.5;
+  }
+
+  & + .catalog-form__label {
+    opacity: 0.5;
+  }
+}
+
+.catalog-form__checkbox-button[type="checkbox"]:checked + .control-mark {
+  background-color: #7859cf;
+
+  &::before {
+    left: 20px;
+  }
+}
+
+.catalog-form__country .catalog-form__label:last-child {
+  margin-bottom: 35px;
+}
+
+.catalog-form__button-submit {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24.5px;
+  box-sizing: border-box;
+  width: 160px;
+  height: 45px;
+  padding: 10.6px 14.5px;
+  background-color: #7859cf;
+  border: none;
+  border-radius: 4px;
+  .font-main(400, 13px, 24px);
+  color: #ffffff;
+}
+
+.catalog-form__button-reset {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 36.5px;
+  box-sizing: border-box;
+  width: 160px;
+  height: 45px;
+  padding: 10.6px 16.5px;
+  border: none;
+  background-color: @base-white;
+  .font-main(400, 14px, 24px);
+  color: #7859cf;
+}
