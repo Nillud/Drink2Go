@@ -4,22 +4,40 @@
   .font-main(700, 24px, 36px);
   color: #333333;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+    .font-main(700, 42px, 64px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .features__list {
   .site-list();
   padding-bottom: 60px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+    margin: 0 30px 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 339px);
+    grid-template-rows: 94px;
+    row-gap: 50px;
+    column-gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 96px;
+    grid-template-columns: repeat(4, 318px);
+    grid-template-rows: 170px;
+    gap: 30px;
+  }
 }
 
 .features__item {
-  width: 280px;
-  height: 142px;
-  margin: 0 auto;
-
-  &:not(:last-child) {
-    margin-bottom: 32px;
-  }
-
   &--speed {
     background: url("../../img/feature-speed.svg") no-repeat top center;
   }
@@ -35,6 +53,52 @@
   &--ecology {
     background: url("../../img/feature-ecology.svg") no-repeat top center;
   }
+
+  @media (max-width: @mobile-width-only) {
+    width: 280px;
+    height: 142px;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--speed {
+      background: url("../../img/feature-speed.svg") no-repeat top left;
+    }
+
+    &--fit {
+      background: url("../../img/feature-fit.svg") no-repeat top left;
+    }
+
+    &--energy {
+      background: url("../../img/feature-energy.svg") no-repeat top left;
+    }
+
+    &--ecology {
+      background: url("../../img/feature-ecology.svg") no-repeat top left;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--speed {
+      background: url("../../img/feature-speed.svg") no-repeat top center;
+    }
+
+    &--fit {
+      background: url("../../img/feature-fit.svg") no-repeat top center;
+    }
+
+    &--energy {
+      background: url("../../img/feature-energy.svg") no-repeat top center;
+    }
+
+    &--ecology {
+      background: url("../../img/feature-ecology.svg") no-repeat top center;
+    }
+  }
 }
 
 .features__item__header {
@@ -43,10 +107,33 @@
   padding-top: 66px;
   .font-main(700, 18px, 32px);
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-left: 72px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-top: 76px;
+    text-align: center;
+  }
 }
 
 .features__desccription {
   margin: 0;
   .font-main(400, 14px, 20px);
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 72px;
+    .font-main(400, 16px, 24px);
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    text-align: center;
+  }
 }

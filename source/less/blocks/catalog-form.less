@@ -1,3 +1,30 @@
+.catalog-form {
+  @media (min-width: @tablet-width) {
+    margin-right: 34px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 30px;
+    width: 318px;
+    height: 714px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+.catalog-form__buttons {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom: 44px;
+  }
+}
+
 .catalog-form fieldset {
   border: none;
   margin: 0;
@@ -8,6 +35,28 @@
   margin-bottom: 21px;
   .font-main(600, 16px, 24px);
   color: #333333;
+}
+
+.catalog-form__price-input {
+  box-sizing: border-box;
+  width: 118px;
+  height: 38px;
+  padding: 7px 10px;
+  border: 2px solid #9070ec;
+  border-radius: 4px;
+  text-align: center;
+  .font-main(500, 16px, 24px);
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 10px;
+    width: 93px;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 8px 10px;
+    width: 134px;
+  }
 }
 
 .catalog-form__prices {
@@ -32,6 +81,18 @@
   height: 25px;
   margin-bottom: 25px;
   background-image: url("../../img/range.png");
+
+  @media (min-width: @tablet-width) {
+    width: 220px;
+    height: 24px;
+    background-image: url("../../img/tablet-range.png");
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+    height: 24px;
+    background-image: url("../../img/desktop-range.png");
+  }
 }
 
 .catalog-form__milk {
@@ -131,6 +192,15 @@
   border-radius: 4px;
   .font-main(400, 13px, 24px);
   color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-right: 30px;
+    padding: 8px 3.5px;
+    width: 148px;
+    height: 40px;
+    .font-main(400, 14px, 24px);
+  }
 }
 
 .catalog-form__button-reset {
@@ -142,7 +212,15 @@
   height: 45px;
   padding: 10.6px 16.5px;
   border: none;
+  border-radius: 4px;
   background-color: @base-white;
   .font-main(400, 14px, 24px);
   color: #7859cf;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding: 8px 5.5px;
+    width: 138px;
+    height: 40px;
+  }
 }

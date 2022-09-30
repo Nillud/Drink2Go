@@ -1,10 +1,24 @@
 .sort {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+    justify-content: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .sort__header {
   .font-main(600, 16px, 24px);
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-right: 10px;
+  }
 }
 
 .sort__select {

@@ -3,10 +3,33 @@
   justify-content: space-between;
   padding: 20px;
   border-bottom: 1px solid #f0ebff;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 20px 30px;
+    width: 100%;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 50px;
+    width: 318px;
+    flex-direction: column;
+  }
 }
 
 .footer-nav__logo {
   margin-top: 2px;
+}
+
+.footer-nav__logo span {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 50px;
+    display: block;
+    .font-main(400, 14px, 20px);
+    color: #333333;
+  }
 }
 
 .footer-nav__list {
@@ -20,6 +43,18 @@
 
   &:not(:last-child) {
     margin-right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 }
 
