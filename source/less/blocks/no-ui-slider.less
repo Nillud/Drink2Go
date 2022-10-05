@@ -1,0 +1,36 @@
+/* stylelint-disable */
+
+.catalog-form__slider.noUi-target:not(#fake-id) {
+  margin-left: 10px;
+  width: 270px;
+  height: 4px;
+  border-radius: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 210px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 308px;
+  }
+}
+
+.catalog-form__slider:not(#fake-id) .noUi-connect {
+  background-color: #9070ec;
+}
+
+.catalog-form__slider:not(#fake-id) .noUi-handle {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  right: -10px;
+  top: -12px;
+  cursor: grab;
+  background-color: #ffffff;
+  border: 2px solid #9070ec;
+}
+
+.catalog-form__slider:not(#fake-id) .noUi-handle::after,
+.catalog-form__slider:not(#fake-id) .noUi-handle::before {
+  display: none;
+}

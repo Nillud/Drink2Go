@@ -47,6 +47,7 @@
   },
   "type": "module",
   "dependencies": {
+    "leaflet": "^1.9.1",
     "nouislider": "^15.6.1"
   }
 }

@@ -19,6 +19,15 @@
 
 .footer-nav__logo {
   margin-top: 2px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .footer-nav__logo span {
@@ -64,4 +73,14 @@
   width: 40px;
   height: 40px;
   padding: 10px;
+
+  &:hover svg path,
+  &:focus svg path {
+    fill: #7859cf;
+  }
+
+  &:active svg {
+    outline: 10px solid rgba(120, 89, 207, 0.25);
+    border-radius: 4px;
+  }
 }

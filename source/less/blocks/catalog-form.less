@@ -1,6 +1,10 @@
 .catalog-form {
+  max-width: 280px;
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     margin-right: 34px;
+    max-width: 728px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -47,6 +51,10 @@
   text-align: center;
   .font-main(500, 16px, 24px);
 
+  &:focus {
+    border-color: #593cac;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 8px 10px;
     width: 93px;
@@ -77,22 +85,7 @@
 }
 
 .catalog-form__slider {
-  width: 280px;
-  height: 25px;
-  margin-bottom: 25px;
-  background-image: url("../../img/range.png");
-
-  @media (min-width: @tablet-width) {
-    width: 220px;
-    height: 24px;
-    background-image: url("../../img/tablet-range.png");
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 318px;
-    height: 24px;
-    background-image: url("../../img/desktop-range.png");
-  }
+  margin-bottom: 35px;
 }
 
 .catalog-form__milk {
@@ -121,6 +114,53 @@
   border: 2px solid #bdbdbd;
 }
 
+.catalog-form__radio-button[type="radio"]:focus + .control-mark,
+.catalog-form__radio-button[type="radio"]:hover + .control-mark {
+  position: relative;
+  border-color: #9070ec;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+}
+
+.catalog-form__radio-button[type="radio"]:checked + .control-mark {
+  position: relative;
+  border: 2px solid #7859cf;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #7859cf;
+  }
+}
+
+.catalog-form__radio-button[type="radio"]:disabled + .control-mark {
+  border-color: #e2e2e2;
+
+  & + .control-label {
+    opacity: 0.5;
+  }
+}
+
+.catalog-form__radio-button[type="radio"]:disabled:checked + .control-mark {
+  &::after {
+    background-color: #e2e2e2;
+  }
+}
+
 .catalog-form__checkbox-button[type="checkbox"] + .control-mark {
   position: relative;
   display: block;
@@ -141,37 +181,44 @@
   }
 }
 
-.catalog-form__radio-button[type="radio"]:checked + .control-mark {
-  position: relative;
-  border: 2px solid #7859cf;
+.catalog-form__checkbox-button[type="checkbox"]:not(:checked):hover + .control-mark,
+.catalog-form__checkbox-button[type="checkbox"]:not(:checked):focus + .control-mark {
+  width: 38px;
+  height: 20px;
+  border: 2px solid #9070ec;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #7859cf;
+  &::before {
+    left: 0;
+    top: 0;
   }
 }
 
-.catalog-form__radio-button:disabled {
-  & + .radio-button {
-    opacity: 0.5;
+.catalog-form__checkbox-button[type="checkbox"]:disabled + .control-mark {
+  background-color: #e2e2e2;
+
+  & + .control-label {
+    color: #e2e2e2;
   }
 
-  & + .catalog-form__label {
-    opacity: 0.5;
+  &::before {
+    background-color: #f8f8f8;
   }
 }
 
-.catalog-form__checkbox-button[type="checkbox"]:checked + .control-mark {
+.catalog-form__checkbox-button[type="checkbox"]:checked:hover + .control-mark,
+.catalog-form__checkbox-button[type="checkbox"]:checked:focus + .control-mark {
   background-color: #7859cf;
 
   &::before {
     left: 20px;
+  }
+}
+
+.catalog-form__checkbox-button[type="checkbox"]:disabled:checked + .control-mark {
+  background-color: #e2e2e2;
+
+  &::before {
+    background-color: #bdbdbd;
   }
 }
 
@@ -216,6 +263,12 @@
   background-color: @base-white;
   .font-main(400, 14px, 24px);
   color: #7859cf;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #ffffff;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
